@@ -1,0 +1,28 @@
+<div>
+    <!-- formGroup is an angular directive and reactifForm is the form 
+    we created in our component.ts -->
+    <form [formGroup]="reactifForm">
+
+        <div class="">
+            <label for="">username</label>
+            <input type="text" id="username" formControlName="username">
+            <!-- formcontrolname is an angular attribute used to link the values 
+            of our forms in the ts with the template -->
+        </div>
+
+        <div class="">
+            <label for="email">Email</label>
+            <input type="email" id="email" formControlName="email">
+        </div>
+
+        <div class="">
+            <label for="password">password</label>
+            <input type="password" id="password" formControlName="password">
+        </div>
+
+        <div class="">
+            <button type="submit" (click)="onSubmitForm()">Submit</button>
+        </div>
+
+    </form>
+</div>

@@ -1,0 +1,39 @@
+<h1>{{'Hello world' | lowercase}}</h1>
+
+<h1>Pipes </h1>
+<h2>{{name | uppercase}}</h2>
+<h2>{{name | lowercase}}</h2>
+<h2>{{name | titlecase}}</h2>
+<h2>{{today | date}}</h2>
+<h2>{{today | date:'fullDate'}}</h2>
+<h2>{{str}}</h2>
+
+<h1>Routing tuto</h1>
+
+<a routerLink="user">user</a>
+<br><br>
+<a routerLink="admin">admin</a>
+
+<router-outlet></router-outlet>
+
+<h3>services</h3>
+<h2>{{nom}}</h2>
+
+<div>
+    <h1 *ngIf="hero"> {{hero.name}}</h1>
+        <!-- here the ngIf will verify if there is the hero class in the ts. if yes we use the interpolation to display de content of hero which we chose name --> -->
+</div>
+
+<app-stuff [appareils] = 'appareils'></app-stuff>
+<br><br><br><br>
+
+<div class="">
+    <!-- link to form -->
+    <a routerLink="/reactif-form"> Form here</a>
+</div>
+<router-outlet></router-outlet>
+
+<br><br><br>
+
+<app-form-control></app-form-control>
+

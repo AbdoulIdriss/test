@@ -1,0 +1,17 @@
+<table>
+    <thead>
+ <tr>
+    <th>Name</th>
+    <th>Quantity</th>
+    <th>Status</th>
+ </tr>
+</thead>
+<tbody>
+<tr *ngFor="let appareil of appareils">
+    <td>{{appareil.name}}</td>
+    <td>{{appareil.Quantity}}</td>
+    <td [ngClass]="appareil.status == 'Available' ? 'green' : 'red' ">{{appareil.status}}</td>
+</tr>
+</tbody>
+
+</table>

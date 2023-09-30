@@ -1,0 +1,15 @@
+<form (ngSubmit)="onsubmitForm">
+    <label for="username">username</label>
+    <input type="text" id="username" [formControl]="username">
+    <div class="has-error" *ngIf="username.errors?.['required']">
+        This field is required
+    </div>
+
+    <div class="has-error" *ngIf="username.errors?.['minlength']">
+        Please enter atleast 5 characters
+    </div>
+
+    <div class="">
+        <button type="submit" [disabled]="username.invalid">submit</button>
+    </div>
+</form>
